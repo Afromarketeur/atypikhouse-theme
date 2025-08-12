@@ -1,0 +1,407 @@
+/**
+ * CSS Responsive supplémentaire
+ * AtypikHouse Theme - Mobile First
+ */
+
+/* === BREAKPOINTS === */
+/* Mobile : 320px - 767px */
+/* Tablet : 768px - 1023px */  
+/* Desktop : 1024px+ */
+
+/* === LAYOUT RESPONSIVE === */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+    
+    .hebergement-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .content-sidebar {
+        order: -1;
+    }
+    
+    .reservation-widget {
+        position: static;
+    }
+}
+
+@media (max-width: 1024px) {
+    /* Header responsive */
+    .header-content {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+    
+    .main-navigation ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .header-actions {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    /* Grilles responsive */
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Filtres */
+    .filters-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Hero section */
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .search-fields {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    /* Typography mobile */
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.25rem; }
+    
+    /* Header mobile */
+    .header-content {
+        padding: 0.75rem 0;
+    }
+    
+    .main-navigation ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        gap: 0.5rem;
+    }
+    
+    .header-actions {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .search-form {
+        width: 100%;
+    }
+    
+    .search-form input {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Hero mobile */
+    .hero {
+        padding: 2rem 0;
+        text-align: center;
+    }
+    
+    .hero-title {
+        font-size: 1.75rem;
+        line-height: 1.2;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .hero-search {
+        padding: 1rem;
+        margin-top: 1.5rem;
+    }
+    
+    .search-fields {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+    
+    .btn-search {
+        grid-column: 1;
+    }
+    
+    /* Grilles mobile */
+    .grid-4,
+    .grid-3,
+    .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    /* Cartes mobile */
+    .card {
+        margin-bottom: 1rem;
+    }
+    
+    .card-content {
+        padding: 1rem;
+    }
+    
+    .card-title {
+        font-size: 1.1rem;
+    }
+    
+    /* Filtres mobile */
+    .filters {
+        padding: 1rem;
+    }
+    
+    .filters-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+    
+    /* Single hébergement mobile */
+    .hebergement-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .hebergement-price-block {
+        order: -1;
+    }
+    
+    .hebergement-gallery {
+        margin-bottom: 1.5rem;
+    }
+    
+    .gallery-thumbnails {
+        display: none; /* Masquer sur mobile */
+    }
+    
+    /* Footer mobile */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .footer-section {
+        text-align: center;
+    }
+    
+    .legal-links {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+    
+    /* Newsletter mobile */
+    .newsletter-fields {
+        flex-direction: column;
+        width: 100%;
+        max-width: none;
+    }
+    
+    .newsletter-fields input {
+        width: 100%;
+        margin-bottom: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Container très petit écran */
+    .container {
+        padding: 0 10px;
+    }
+    
+    /* Typography très petit */
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.25rem; }
+    
+    /* Boutons plus petits */
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+    
+    /* Hero très petit écran */
+    .hero {
+        padding: 1.5rem 0;
+    }
+    
+    .hero-title {
+        font-size: 1.5rem;
+    }
+    
+    .hero-search {
+        padding: 0.75rem;
+    }
+    
+    /* Cartes très compactes */
+    .card-content {
+        padding: 0.75rem;
+    }
+    
+    .card-title {
+        font-size: 1rem;
+    }
+    
+    .card-price {
+        font-size: 1.25rem;
+    }
+    
+    /* Breadcrumb mobile */
+    .breadcrumb-item {
+        max-width: 100px;
+        font-size: 0.75rem;
+    }
+}
+
+/* === ACCESSIBILITÉ MOBILE === */
+@media (max-width: 768px) {
+    /* Améliorer les zones de touch */
+    a, button, input, select {
+        min-height: 44px;
+        min-width: 44px;
+    }
+    
+    /* Espacement pour les doigts */
+    .main-navigation a {
+        padding: 0.75rem 1rem;
+        margin: 0.25rem;
+    }
+    
+    .card {
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Focus visible mobile */
+    .btn:focus,
+    a:focus,
+    input:focus,
+    select:focus {
+        outline: 3px solid var(--couleur-principale);
+        outline-offset: 2px;
+    }
+}
+
+/* === COOKIES BANNER RESPONSIVE === */
+@media (max-width: 768px) {
+    .cookie-banner {
+        position: fixed;
+        padding: 1rem;
+    }
+    
+    .cookie-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .cookie-actions {
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .cookie-modal-content {
+        margin: 10px;
+        padding: 1rem;
+    }
+}
+
+/* === PERFORMANCE === */
+/* Lazy loading support */
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+img[loading="lazy"].loaded {
+    opacity: 1;
+}
+
+/* Réduction d'animations sur petits écrans */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* === PRINT === */
+@media print {
+    .cookie-banner,
+    .header-actions,
+    .btn,
+    .filters {
+        display: none !important;
+    }
+    
+    .container {
+        max-width: none;
+    }
+    
+    .card {
+        border: 1px solid #ccc;
+        break-inside: avoid;
+    }
+}
+
+/* === DARK MODE SUPPORT === */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --couleur-principale: #4CAF50;
+        --couleur-secondaire: #ffffff;
+        --couleur-accent: #121212;
+        --couleur-gris: #2d2d2d;
+    }
+    
+    body {
+        background-color: var(--couleur-accent);
+        color: var(--couleur-secondaire);
+    }
+    
+    .card {
+        background: #1e1e1e;
+        border: 1px solid #333;
+    }
+}
+
+/* === ANIMATIONS RESPONSIVE === */
+@media (min-width: 769px) {
+    .fade-in {
+        animation: fadeInUp 0.6s ease-out forwards;
+    }
+    
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* === NAVIGATION STICKY === */
+@media (min-width: 769px) {
+    .site-header.sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+    }
+}
